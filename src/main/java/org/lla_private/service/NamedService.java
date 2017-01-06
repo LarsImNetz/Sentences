@@ -1,6 +1,6 @@
 package org.lla_private.service;
 
-public class SentenceImplTest implements ISentenceTest {
+public class NamedService implements INamedService {
 
 	@Override
 	public String getHello() {		

@@ -1,5 +1,5 @@
 package org.lla_private.service;
 
-public interface ISentenceTest {
+public interface INamedService {
 	String getHello();
 }
