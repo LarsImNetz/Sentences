@@ -47,20 +47,4 @@ public class TestWordDreher {
 		word.verdrehen();
 		Assert.assertEquals("vrelgiech", word.getWord());
 	}
-
-	@Test
-	public void testVerwuerfeln_zwei() {
-		WordDreher word = new WordDreher();
-		word.setWord("zwei");
-		word.verwuerfeln();
-		Assert.assertEquals("zewi", word.getWord());
-	}
-
-	@Test
-	public void testVerwuerfeln_rennt() {
-		WordDreher word = new WordDreher();
-		word.setWord("rennt");
-		word.verwuerfeln();
-		Assert.assertEquals("rnnet", word.getWord());
-	}
 }

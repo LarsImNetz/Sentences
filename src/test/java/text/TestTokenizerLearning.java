@@ -10,6 +10,13 @@ import com.google.common.base.CharMatcher;
 
 import org.junit.Assert;
 
+/**
+ * Learning Tests für 
+ * - StringTokenizer
+ * - Scanner
+ * - CharMatcher
+ *
+ */
 public class TestTokenizerLearning {
 
 	@Test(expected = NullPointerException.class)

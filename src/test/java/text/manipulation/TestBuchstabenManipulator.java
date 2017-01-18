@@ -1,6 +1,8 @@
-package text;
+package text.manipulation;
 
 import org.junit.Test;
+
+import text.manipulation.BuchstabenManipulator;
 
 import org.junit.Assert;
 
@@ -42,5 +44,29 @@ public class TestBuchstabenManipulator {
 		manipulator.setWord("abcd");
 		manipulator.buchstabenZweitenMitLetztemTauschen();
 		Assert.assertEquals("acbd", manipulator.getWord());
+	}
+	
+	@Test
+	public void testPerformWith4Chars() {
+		BuchstabenManipulator manipulator = new BuchstabenManipulator();
+		manipulator.setWord("abcd");
+		manipulator.perform();
+		Assert.assertEquals("acbd", manipulator.getWord());		
+	}
+
+	@Test
+	public void testPerformWith5Chars() {
+		BuchstabenManipulator manipulator = new BuchstabenManipulator();
+		manipulator.setWord("abcde");
+		manipulator.perform();
+		Assert.assertEquals("acbde", manipulator.getWord());		
+	}
+
+	@Test
+	public void testPerformWith6Chars() {
+		BuchstabenManipulator manipulator = new BuchstabenManipulator();
+		manipulator.setWord("abcdef");
+		manipulator.perform();
+		Assert.assertEquals("acbedf", manipulator.getWord());		
 	}
 }

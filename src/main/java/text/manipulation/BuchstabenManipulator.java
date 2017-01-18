@@ -1,4 +1,4 @@
-package text;
+package text.manipulation;
 
 import com.google.common.base.Preconditions;
 
@@ -11,20 +11,32 @@ import com.google.common.base.Preconditions;
  * Zumindest Muttersprachler sollten das nach kurzer eingewöhnung schnell beherrschen.
  * 
  */
-public class BuchstabenManipulator {
+public class BuchstabenManipulator implements IWord {
 
 	private char[] buchstaben;
 	
 	public BuchstabenManipulator() {
 	}
 
+	@Override
 	public void setWord(String word) {
 		Preconditions.checkArgument(word != null);
 		this.buchstaben = word.toCharArray();
 	}
 	
+	@Override
 	public String getWord() {
 		return new String(this.buchstaben);
+	}
+	
+	@Override
+	public void perform() {
+		if (buchstaben.length > 4) {
+			buchstabenNachbarnTauschen();
+		}
+		else if (buchstaben.length > 3) {
+			buchstabenZweitenMitLetztemTauschen();
+		}
 	}
 	
 	void buchstabenNachbarnTauschen() {

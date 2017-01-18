@@ -1,4 +1,4 @@
-package text;
+package text.manipulation;
 
 import com.google.common.base.Preconditions;
 
@@ -11,20 +11,27 @@ import com.google.common.base.Preconditions;
  * Zumindest Muttersprachler sollten das nach kurzer eingewöhnung schnell beherrschen.
  * 
  */
-public class BuchstabenManipulatorDigit {
+public class BuchstabenManipulatorDigit implements IWord {
 
 	private char[] buchstaben;
 	
 	public BuchstabenManipulatorDigit() {
 	}
 
+	@Override
 	public void setWord(String word) {
 		Preconditions.checkArgument(word != null);
 		this.buchstaben = word.toCharArray();
 	}
 	
+	@Override
 	public String getWord() {
 		return new String(this.buchstaben);
+	}
+	
+	@Override
+	public void perform() {
+		buchstabenErsetzen();
 	}
 	
 	void buchstabenErsetzen() {
