@@ -1,4 +1,4 @@
-package org.lla_private.service;
+package org.lla_private.service.justatest;
 
 import com.google.inject.AbstractModule;
 
