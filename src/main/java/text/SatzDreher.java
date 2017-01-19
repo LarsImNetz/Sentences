@@ -7,6 +7,7 @@ import text.manipulation.BuchstabenManipulator;
 /**
  * SatzDreher verdreht in einem gegebenen Satz nur die Wörter, nicht aber die Satzzeichen und die Wortreihenfolge. 
  *
+ * @deprecated use SatzManipulator(new BuchstabenManipulator()) instead 
  */
 public class SatzDreher {
 
