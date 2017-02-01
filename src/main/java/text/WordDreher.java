@@ -6,7 +6,7 @@ import text.manipulation.BuchstabenManipulator;
 
 /*
  * Buchstabendreher
- * Verdreht und Vertauscht buchstaben in einer beliebigen Reihenfolge
+ * Verdreht und Vertauscht Buchstaben in einer beliebigen Reihenfolge
  */
 public class WordDreher {
 

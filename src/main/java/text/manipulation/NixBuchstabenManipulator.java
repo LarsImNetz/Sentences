@@ -2,7 +2,7 @@ package text.manipulation;
 
 /**
  * Manipuliert nichts, implementiert nur das Interface IWord
- *
+ * eigentlich für Tests implementiert 
  */
 public class NixBuchstabenManipulator implements IWord {
 
