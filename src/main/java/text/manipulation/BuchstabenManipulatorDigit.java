@@ -36,45 +36,46 @@ public class BuchstabenManipulatorDigit implements IWord {
 	
 	void buchstabenErsetzen() {
 		// PRE: Es sollte eine Menge von Buchstaben geben
-
-		// Immer zwei aufeinander folgende Buchstaben verdrehen
 		
 		for (int position = 0; position < buchstaben.length; position ++) {
-			buchstaben[position] = convert(this.buchstaben[position]);			
+			buchstaben[position] = convert(this.buchstaben[position]);
 		}
 	}
 
 	private char convert(char buchstabe) {
-		String buchstabetoUpper = String.valueOf(buchstabe).toUpperCase();
-		switch(buchstabetoUpper) {
-			case "I":
-				buchstabetoUpper = "1";
+
+		switch(buchstabe) {
+			case 'I':
+				buchstabe = '1';
 				break;
-			case "Z":
-				buchstabetoUpper = "2";
+			case 'Z':
+				buchstabe = '2';
 				break;
-			case "E":
-				buchstabetoUpper = "3";
+			case 'E':
+				buchstabe = '3';
 				break;
-			case "A":
-				buchstabetoUpper = "4";
+			case 'A':
+				buchstabe = '4';
 				break;
-			case "S":
-				buchstabetoUpper = "5";
+			case 'S':
+				buchstabe = '5';
 				break;
-//			case "G":
-//				buchstabetoUpper = "6";
+//			case 'G':
+//				buchstabetoUpper = '6';
 //				break;
-			case "T":
-				buchstabetoUpper = "7";
+			case 'T':
+				buchstabe = '7';
 				break;
-//			case "B":
-//				buchstabetoUpper = "8";
+//			case 'B':
+//				buchstabetoUpper = '8';
 //				break;
-			case "O":
-				buchstabetoUpper = "0";
+//			case '':
+//				buchstabetoUpper = '9';
+//				break;
+			case 'O':
+				buchstabe = '0';
 				break;
 		}
-		return buchstabetoUpper.charAt(0);
+		return buchstabe;
 	}
 }

@@ -25,7 +25,7 @@ public class TestBuchstabenManipulatorDigit {
 	@Test
 	public void testBuchstabenNachbarnTauschen_abcd() {
 		BuchstabenManipulatorDigit manipulator = new BuchstabenManipulatorDigit();
-		manipulator.setWord("abcd");
+		manipulator.setWord("abcd".toUpperCase());
 		manipulator.buchstabenErsetzen();
 		Assert.assertEquals("4BCD", manipulator.getWord());
 	}
@@ -33,7 +33,7 @@ public class TestBuchstabenManipulatorDigit {
 	@Test
 	public void testBuchstabenNachbarnTauschen_gehirn() {
 		BuchstabenManipulatorDigit manipulator = new BuchstabenManipulatorDigit();
-		manipulator.setWord("gehirn");
+		manipulator.setWord("gehirn".toUpperCase());
 		manipulator.buchstabenErsetzen();
 		Assert.assertEquals("G3H1RN", manipulator.getWord());
 	}
@@ -41,7 +41,7 @@ public class TestBuchstabenManipulatorDigit {
 	@Test
 	public void testBuchstabenNachbarnTauschen_dieser() {
 		BuchstabenManipulatorDigit manipulator = new BuchstabenManipulatorDigit();
-		manipulator.setWord("dieser");
+		manipulator.setWord("dieser".toUpperCase());
 		manipulator.buchstabenErsetzen();
 		Assert.assertEquals("D1353R", manipulator.getWord());
 	}
@@ -49,7 +49,7 @@ public class TestBuchstabenManipulatorDigit {
 	@Test
 	public void testBuchstabenNachbarnTauschen_text() {
 		BuchstabenManipulatorDigit manipulator = new BuchstabenManipulatorDigit();
-		manipulator.setWord("text");
+		manipulator.setWord("text".toUpperCase());
 		manipulator.buchstabenErsetzen();
 		Assert.assertEquals("73X7", manipulator.getWord());
 	}
