@@ -7,8 +7,10 @@ import com.google.common.base.Preconditions;
  * - Es wird nicht geprüft, ob die Menge leer ist (Design by contract)
  * - Es wird nicht geprüft, ob eine gewisse Länge vorhanden ist
  *
- * Der erste und der letze Buchstaben bleiben unberührt, das Gehirn sollte das Word weiter lesen können
- * Zumindest Muttersprachler sollten das nach kurzer eingewöhnung schnell beherrschen.
+ * Diese Mitteilung dient als Beweis dafuer, was fuer erstaunliche Dinge unser Verstand leisten kann.
+ * Beeindruckend. Am Anfang war's schon schwer, aber jetzt, in dieser Zeile, liest es dein Gehirn
+ * automatisch. Ohne darueber nachzudenken. Sei Stolz drauf.
+ * Also teile dieses Bild, wenn du es lesen kannst.
  * 
  */
 public class BuchstabenManipulatorDigit implements IWord {
