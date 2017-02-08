@@ -8,3 +8,5 @@ der Buchstaben ist nicht richtig. Das Gehirn setzt diese Wörter wieder zu lesba
 * Einige Buchstaben werden durch Zahlen ersetzt
 * Einige Buchstaben werden durch Kyrillische Zeichen erstetzt. Einige durch Buchstaben, die spiegelverkehrt sind.
 
+Hier mal ein paar Beispiele, was noch implementiert werden könnte...
+* http://www.w3schools.com/charsets/ref_utf_latin_extended_a.asp
