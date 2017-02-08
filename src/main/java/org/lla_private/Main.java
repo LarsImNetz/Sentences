@@ -1,6 +1,6 @@
 package org.lla_private;
 
-import text.SatzDreher;
+import text.manipulation.satz.SatzDreher;
 
 public class Main {
 

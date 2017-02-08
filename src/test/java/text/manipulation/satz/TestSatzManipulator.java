@@ -1,10 +1,11 @@
-package text;
+package text.manipulation.satz;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import text.manipulation.NixBuchstabenManipulator;
+import text.manipulation.satz.SatzManipulator;
+import text.manipulation.word.NixBuchstabenManipulator;
 
 public class TestSatzManipulator {
 
@@ -18,14 +19,12 @@ public class TestSatzManipulator {
 	@Test
 	public void testSentenceHalloWelt() {
 		satzManipulatorSUT.setSentence("Hallo Welt");
-		satzManipulatorSUT.perform();
 		Assert.assertEquals("Hallo Welt", satzManipulatorSUT.getSentence());
 	}
 
 	@Test
 	public void testSentenceLong() {
 		satzManipulatorSUT.setSentence("Lieber 5 Minuten feige, als das ganze Leben tot.");
-		satzManipulatorSUT.perform();
 		Assert.assertEquals("Lieber 5 Minuten feige, als das ganze Leben tot.", satzManipulatorSUT.getSentence());
 	}
 }

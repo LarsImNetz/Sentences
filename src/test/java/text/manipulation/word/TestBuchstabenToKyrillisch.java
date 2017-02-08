@@ -1,8 +1,10 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import text.manipulation.word.BuchstabenToKyrillisch;
 
 public class TestBuchstabenToKyrillisch {
 
@@ -16,7 +18,6 @@ public class TestBuchstabenToKyrillisch {
 	@Test
 	public void testHalloWelt() {
 		buchstabenToKyrillischSUT.setWord("HALLO WELT");
-		buchstabenToKyrillischSUT.perform();
 		
 		System.out.println(buchstabenToKyrillischSUT.getWord());			
 	}
@@ -24,7 +25,6 @@ public class TestBuchstabenToKyrillisch {
 	@Test
 	public void testB() {
 		buchstabenToKyrillischSUT.setWord("B");
-		buchstabenToKyrillischSUT.perform();
 		
 		System.out.println(buchstabenToKyrillischSUT.getWord());	
 	}
@@ -32,7 +32,6 @@ public class TestBuchstabenToKyrillisch {
 	@Test
 	public void testA() {
 		buchstabenToKyrillischSUT.setWord("A");
-		buchstabenToKyrillischSUT.perform();
 		
 		Assert.assertEquals("А", buchstabenToKyrillischSUT.getWord());
 	}

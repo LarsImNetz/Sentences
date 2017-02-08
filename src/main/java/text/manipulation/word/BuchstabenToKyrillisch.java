@@ -1,4 +1,4 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
@@ -17,11 +17,11 @@ public class BuchstabenToKyrillisch implements IWord {
 
 	@Override
 	public String getWord() {
+		perform();
 		return new String(this.buchstaben);
 	}
 
-	@Override
-	public void perform() {
+	private void perform() {
 		for (int position = 0; position < buchstaben.length; position++) {
 			buchstaben[position] = convert(buchstaben[position]);
 		}

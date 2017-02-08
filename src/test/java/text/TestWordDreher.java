@@ -9,7 +9,6 @@ public class TestWordDreher {
 	public void testVerdrehen_ein() throws Exception {
 		WordDreher word = new WordDreher();
 		word.setWord("ein");
-		word.verdrehen();
 		Assert.assertEquals("ein", word.getWord());
 	}
 
@@ -17,7 +16,6 @@ public class TestWordDreher {
 	public void testVerdrehen_zwei() throws Exception {
 		WordDreher word = new WordDreher();
 		word.setWord("zwei");
-		word.verdrehen();
 		Assert.assertEquals("zewi", word.getWord());
 	}
 
@@ -26,7 +24,6 @@ public class TestWordDreher {
 	public void testVerdrehen_gehen() throws Exception {
 		WordDreher word = new WordDreher();
 		word.setWord("gehen");
-		word.verdrehen();
 		Assert.assertEquals("gheen", word.getWord());
 	}
 
@@ -35,7 +32,6 @@ public class TestWordDreher {
 	public void testVerdrehen_laufen() throws Exception {
 		WordDreher word = new WordDreher();
 		word.setWord("laufen");
-		word.verdrehen();
 		Assert.assertEquals("luaefn", word.getWord());
 	}
 
@@ -44,7 +40,6 @@ public class TestWordDreher {
 	public void testVerdrehen_vergleich() throws Exception {
 		WordDreher word = new WordDreher();
 		word.setWord("vergleich");
-		word.verdrehen();
 		Assert.assertEquals("vrelgiech", word.getWord());
 	}
 }

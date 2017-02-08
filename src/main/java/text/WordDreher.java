@@ -2,7 +2,7 @@ package text;
 
 import com.google.common.base.Preconditions;
 
-import text.manipulation.BuchstabenManipulator;
+import text.manipulation.word.BuchstabenManipulator;
 
 /*
  * Buchstabendreher
@@ -27,8 +27,4 @@ public class WordDreher {
 		return manipulator.getWord();
 	}
 	
-	public WordDreher verdrehen() {
-		manipulator.perform();
-		return this;
-	}	
 }

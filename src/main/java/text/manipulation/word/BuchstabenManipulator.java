@@ -1,4 +1,4 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
@@ -26,11 +26,11 @@ public class BuchstabenManipulator implements IWord {
 	
 	@Override
 	public String getWord() {
+		perform();
 		return new String(this.buchstaben);
 	}
 	
-	@Override
-	public void perform() {
+	private void perform() {
 		if (buchstaben.length > 4) {
 			buchstabenNachbarnTauschen();
 		}
@@ -39,7 +39,7 @@ public class BuchstabenManipulator implements IWord {
 		}
 	}
 	
-	void buchstabenNachbarnTauschen() {
+	private void buchstabenNachbarnTauschen() {
 		// PRE: Es sollte eine Menge von Buchstaben geben
 
 		// Immer zwei aufeinander folgende Buchstaben verdrehen
@@ -49,7 +49,7 @@ public class BuchstabenManipulator implements IWord {
 		}
 	}
 	
-	void buchstabenZweitenMitLetztemTauschen() {
+	private void buchstabenZweitenMitLetztemTauschen() {
 		Preconditions.checkState(buchstaben.length > 2);
 		// PRE: Es sollte eine Menge von Buchstaben geben
 		

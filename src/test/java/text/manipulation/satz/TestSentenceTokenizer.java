@@ -1,4 +1,4 @@
-package text;
+package text.manipulation.satz;
 
 import java.util.Enumeration;
 import java.util.NoSuchElementException;

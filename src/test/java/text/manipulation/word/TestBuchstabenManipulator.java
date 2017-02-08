@@ -1,8 +1,8 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import org.junit.Test;
 
-import text.manipulation.BuchstabenManipulator;
+import text.manipulation.word.BuchstabenManipulator;
 
 import org.junit.Assert;
 
@@ -18,7 +18,6 @@ public class TestBuchstabenManipulator {
 	public void testBuchstabenNachbarnTauschen_empty() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("");
-		manipulator.buchstabenNachbarnTauschen();
 		Assert.assertEquals("", manipulator.getWord());
 	}
 
@@ -26,7 +25,6 @@ public class TestBuchstabenManipulator {
 	public void testBuchstabenNachbarnTauschen_abcd() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abcd");
-		manipulator.buchstabenNachbarnTauschen();
 		Assert.assertEquals("acbd", manipulator.getWord());
 	}
 
@@ -34,7 +32,6 @@ public class TestBuchstabenManipulator {
 	public void testBuchstabenZweitenMitLetztemTauschen_abc() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abc");
-		manipulator.buchstabenZweitenMitLetztemTauschen();
 		Assert.assertEquals("abc", manipulator.getWord());
 	}
 
@@ -42,7 +39,6 @@ public class TestBuchstabenManipulator {
 	public void testBuchstabenZweitenMitLetztemTauschen_abcd() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abcd");
-		manipulator.buchstabenZweitenMitLetztemTauschen();
 		Assert.assertEquals("acbd", manipulator.getWord());
 	}
 	
@@ -50,7 +46,6 @@ public class TestBuchstabenManipulator {
 	public void testPerformWith4Chars() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abcd");
-		manipulator.perform();
 		Assert.assertEquals("acbd", manipulator.getWord());		
 	}
 
@@ -58,7 +53,6 @@ public class TestBuchstabenManipulator {
 	public void testPerformWith5Chars() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abcde");
-		manipulator.perform();
 		Assert.assertEquals("acbde", manipulator.getWord());		
 	}
 
@@ -66,7 +60,6 @@ public class TestBuchstabenManipulator {
 	public void testPerformWith6Chars() {
 		BuchstabenManipulator manipulator = new BuchstabenManipulator();
 		manipulator.setWord("abcdef");
-		manipulator.perform();
 		Assert.assertEquals("acbedf", manipulator.getWord());		
 	}
 }

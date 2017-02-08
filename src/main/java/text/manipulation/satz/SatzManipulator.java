@@ -1,7 +1,6 @@
-package text;
+package text.manipulation.satz;
 
-import text.manipulation.ISentence;
-import text.manipulation.IWord;
+import text.manipulation.word.IWord;
 
 public class SatzManipulator implements ISentence {
 
@@ -20,18 +19,17 @@ public class SatzManipulator implements ISentence {
 	
 	@Override
 	public String getSentence() {
+		perform();
 		return this.sentence;
 	}
 	
-	@Override
-	public void perform() {
+	private void perform() {
 		SentenceTokenizer tokenizer = new SentenceTokenizer(sentence);
 		StringBuilder verdreherSatz = new StringBuilder();
 		while(tokenizer.hasMoreElements()) {
 			String token = tokenizer.nextElement();
 			if (tokenizer.isWord()) {
 				algorithm.setWord(token);
-				algorithm.perform();
 				token = algorithm.getWord();
 			}
 			verdreherSatz.append(token);

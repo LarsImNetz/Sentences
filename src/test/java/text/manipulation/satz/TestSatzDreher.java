@@ -1,7 +1,9 @@
-package text;
+package text.manipulation.satz;
 
 import org.junit.Assert;
 import org.junit.Test;
+
+import text.manipulation.satz.SatzDreher;
 
 public class TestSatzDreher {
 

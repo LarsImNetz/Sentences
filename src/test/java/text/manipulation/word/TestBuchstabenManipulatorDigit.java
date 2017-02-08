@@ -1,8 +1,8 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import org.junit.Test;
 
-import text.manipulation.BuchstabenManipulatorDigit;
+import text.manipulation.word.BuchstabenManipulatorDigit;
 
 import org.junit.Assert;
 

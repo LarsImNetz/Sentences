@@ -1,14 +1,15 @@
-package text;
+package text.manipulation.satz;
 
 import com.google.common.base.Preconditions;
 
-import text.manipulation.BuchstabenManipulator;
+import text.manipulation.word.BuchstabenManipulator;
 
 /**
  * SatzDreher verdreht in einem gegebenen Satz nur die Wörter, nicht aber die Satzzeichen und die Wortreihenfolge. 
  *
  * @deprecated use SatzManipulator(new BuchstabenManipulator()) instead 
  */
+@Deprecated
 public class SatzDreher {
 
 	private final String satz;
@@ -28,7 +29,6 @@ public class SatzDreher {
 	public String getVerdrehtenSatz() {
 		SatzManipulator manipulator = new SatzManipulator(new BuchstabenManipulator());
 		manipulator.setSentence(satz);
-		manipulator.perform();
 		return manipulator.getSentence();
 	}
 }

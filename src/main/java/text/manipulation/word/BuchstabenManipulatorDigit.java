@@ -1,4 +1,4 @@
-package text.manipulation;
+package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
@@ -28,12 +28,8 @@ public class BuchstabenManipulatorDigit implements IWord {
 	
 	@Override
 	public String getWord() {
-		return new String(this.buchstaben);
-	}
-	
-	@Override
-	public void perform() {
 		buchstabenErsetzen();
+		return new String(this.buchstaben);
 	}
 	
 	void buchstabenErsetzen() {
