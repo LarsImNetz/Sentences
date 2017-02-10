@@ -23,94 +23,184 @@ public class BuchstabenToOpf implements IWord {
 	private String perform() {
         StringBuilder buffer = new StringBuilder();
 		for (char buchstabe: word.toCharArray()) {
-			buffer.append(convert(buchstabe));
+            String charAsString = String.valueOf(buchstabe);
+			buffer.append(convertOnlyUppercase(convertOnlyLowercase(charAsString)));
 		}
         return buffer.toString();
 	}
 
-	private String convert(char character) {
+	private String convertOnlyUppercase(String character) {
 		String neu = "";
 		switch (character) {
-		case 'A':
+		case "A":
 			neu = "&Aopf;"; // Aoopf
 			break;
-		case 'B':
+		case "B":
 			neu = "&Bopf;";
 			break;
-		case 'C':
+		case "C":
 			neu = "&Copf;";
 			break;
-		case 'D':
+		case "D":
 			neu = "&Dopf;";
 			break;
-		case 'E':
+		case "E":
 			neu = "&Eopf;";
 			break;
-		case 'F':
+		case "F":
 			neu = "&Fopf;";
 			break;
-		case 'G':
+		case "G":
 			neu = "&Gopf;";
 			break;
-		case 'H':
+		case "H":
 			neu = "&Hopf;";
 			break;
-		case 'I':
+		case "I":
 			neu = "&Iopf;";
 			break;
-		case 'J':
+		case "J":
 			neu = "&Jopf;";
 			break;
-		case 'K':
+		case "K":
 			neu = "&Kopf;";
 			break;
-		case 'L':
+		case "L":
 			neu = "&Lopf;";
 			break;
-		case 'M':
+		case "M":
 			neu = "&Mopf;";
 			break;
-		case 'N':
+		case "N":
 			neu = "&Nopf;";
 			break;
-		case 'O':
+		case "O":
 			neu = "&Oopf;";
 			break;
-		case 'P':
+		case "P":
 			neu = "&Popf;";
 			break;
-		case 'Q':
+		case "Q":
 			neu = "&Qopf;";
 			break;
-		case 'R':
+		case "R":
 			neu = "&Ropf;";
 			break;
-		case 'S':
+		case "S":
 			neu = "&Sopf;";
 			break;
-		case 'T':
+		case "T":
 			neu = "&Topf;";
 			break;
-		case 'U':
+		case "U":
 			neu = "&Uopf;";
 			break;
-		case 'V':
+		case "V":
 			neu = "&Vopf;";
 			break;
-		case 'W':
+		case "W":
 			neu = "&Wopf;";
 			break;
-		case 'X':
+		case "X":
 			neu = "&Xopf;";
 			break;
-		case 'Y':
+		case "Y":
 			neu = "&Yopf;";
 			break;
-		case 'Z':
+		case "Z":
 			neu = "&Zopf;";
 			break;
 		default:
+            neu = character;
 		}
 		return neu;
 	}
+
+	private String convertOnlyLowercase(String character) {
+		String neu = "";
+		switch (character) {
+		case "a":
+			neu = "&aopf;"; // Aoopf
+			break;
+		case "b":
+			neu = "&bopf;";
+			break;
+		case "c":
+			neu = "&copf;";
+			break;
+		case "d":
+			neu = "&dopf;";
+			break;
+		case "e":
+			neu = "&eopf;";
+			break;
+		case "f":
+			neu = "&fopf;";
+			break;
+		case "g":
+			neu = "&gopf;";
+			break;
+		case "h":
+			neu = "&hopf;";
+			break;
+		case "i":
+			neu = "&iopf;";
+			break;
+		case "j":
+			neu = "&jopf;";
+			break;
+		case "k":
+			neu = "&kopf;";
+			break;
+		case "l":
+			neu = "&lopf;";
+			break;
+		case "m":
+			neu = "&mopf;";
+			break;
+		case "n":
+			neu = "&nopf;";
+			break;
+		case "o":
+			neu = "&oopf;";
+			break;
+		case "p":
+			neu = "&popf;";
+			break;
+		case "q":
+			neu = "&qopf;";
+			break;
+		case "r":
+			neu = "&ropf;";
+			break;
+		case "s":
+			neu = "&sopf;";
+			break;
+		case "t":
+			neu = "&topf;";
+			break;
+		case "u":
+			neu = "&uopf;";
+			break;
+		case "v":
+			neu = "&vopf;";
+			break;
+		case "w":
+			neu = "&wopf;";
+			break;
+		case "x":
+			neu = "&xopf;";
+			break;
+		case "y":
+			neu = "&yopf;";
+			break;
+		case "z":
+			neu = "&zopf;";
+			break;
+		default:
+            neu = character;
+		}
+		return neu;
+	}
+
 }
