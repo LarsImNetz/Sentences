@@ -24,16 +24,55 @@ public class BuchstabenToOpf implements IWord {
         StringBuilder buffer = new StringBuilder();
 		for (char buchstabe: word.toCharArray()) {
             String charAsString = String.valueOf(buchstabe);
-			buffer.append(convertOnlyUppercase(convertOnlyLowercase(charAsString)));
+			buffer.append(convertOnlyUppercase(convertOnlyLowercase(convertOnlyDigits(charAsString))));
 		}
         return buffer.toString();
 	}
 
+	private String convertOnlyDigits(String character) {
+		String neu = "";
+ 		switch (character) {
+		case "0":
+			neu = "&#120792;";
+			break;
+		case "1":
+			neu = "&#120793;";
+			break;
+		case "2":
+			neu = "&#120794;";
+			break;
+		case "3":
+			neu = "&#120795;";
+			break;
+		case "4":
+			neu = "&#120796;";
+			break;
+		case "5":
+			neu = "&#120797;";
+			break;
+		case "6":
+			neu = "&#120798;";
+			break;
+		case "7":
+			neu = "&#120799;";
+			break;
+		case "8":
+			neu = "&#120800;";
+			break;
+		case "9":
+			neu = "&#120801;";
+			break;
+        default:
+            neu = character;
+        }
+        return neu;
+    }
+        
 	private String convertOnlyUppercase(String character) {
 		String neu = "";
 		switch (character) {
 		case "A":
-			neu = "&Aopf;"; // Aoopf
+			neu = "&#120120;"; // "&Aopf;"; // Aoopf
 			break;
 		case "B":
 			neu = "&Bopf;";

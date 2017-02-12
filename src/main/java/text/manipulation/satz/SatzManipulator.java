@@ -28,7 +28,7 @@ public class SatzManipulator implements ISentence {
 		StringBuilder verdreherSatz = new StringBuilder();
 		while(tokenizer.hasMoreElements()) {
 			String token = tokenizer.nextElement();
-			if (tokenizer.isWord()) {
+			if (tokenizer.isWord() || tokenizer.isNumber()) {
 				algorithm.setWord(token);
 				token = algorithm.getWord();
 			}

@@ -46,6 +46,10 @@ public class SentenceTokenizer implements Enumeration<String> {
 	public boolean isWord() {
 		return elementType.equals(Type.WORD);
 	}
+
+	public boolean isNumber() {
+		return elementType.equals(Type.NUMBER);
+	}
 	
 	@Override
 	public boolean hasMoreElements() {
