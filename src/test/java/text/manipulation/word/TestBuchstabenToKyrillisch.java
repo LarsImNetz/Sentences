@@ -35,4 +35,10 @@ public class TestBuchstabenToKyrillisch {
 		
 		Assert.assertEquals("А", buchstabenToKyrillischSUT.getWord());
 	}
+	
+	@Test
+	public void testA2Z() {
+		buchstabenToKyrillischSUT.setWord("The quick brown fox jumps over the lazy dog".toUpperCase());
+		Assert.assertNotNull(buchstabenToKyrillischSUT.getWord());
+	}
 }
