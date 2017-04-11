@@ -27,11 +27,49 @@ public class BuchstabenToFraktur implements IWord {
 		StringBuilder buffer = new StringBuilder();
 		for (char buchstabe : word.toCharArray()) {
 			String charAsString = String.valueOf(buchstabe);
-			buffer.append(convertOnlyUppercase(convertOnlyLowercase(charAsString)));
+			buffer.append(convertOnlyUppercase(convertOnlyLowercase(convertOnlyDigits(charAsString))));
 		}
 		return buffer.toString();
 	}
 
+	private String convertOnlyDigits(String character) {
+		String neu = "";
+ 		switch (character) {
+		case "0":
+			neu = "&0fr;";
+			break;
+		case "1":
+			neu = "&1fr;";
+			break;
+		case "2":
+			neu = "&2fr;";
+			break;
+		case "3":
+			neu = "&3fr;";
+			break;
+		case "4":
+			neu = "&4fr;";
+			break;
+		case "5":
+			neu = "&5fr;";
+			break;
+		case "6":
+			neu = "&6fr;";
+			break;
+		case "7":
+			neu = "&7fr;";
+			break;
+		case "8":
+			neu = "&8fr;";
+			break;
+		case "9":
+			neu = "&9fr;";
+			break;
+        default:
+            neu = character;
+        }
+        return neu;
+    }
 	private String convertOnlyUppercase(String character) {
 		String neu = "";
 		switch (character) {
