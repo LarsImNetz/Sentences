@@ -10,5 +10,7 @@ der Buchstaben ist nicht richtig. Das Gehirn setzt diese Wörter wieder zu lesba
 
 Hier mal ein paar Beispiele, was noch implementiert werden könnte...
 * http://www.w3schools.com/charsets/ref_utf_latin_extended_a.asp
+* https://dev.w3.org/html5/html-author/charref
+* https://www.mediaevent.de/tutorial/sonderzeichen-wetter-musik.html
 
 The quick brown fox jumps over the lazy dog
