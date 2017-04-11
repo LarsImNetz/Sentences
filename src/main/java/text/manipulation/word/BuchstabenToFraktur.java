@@ -2,6 +2,9 @@ package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
+/**
+ * Wandelt Buchstaben Groß und klein in Frakturschrift
+ */
 public class BuchstabenToFraktur implements IWord {
 
 	private String word;

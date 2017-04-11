@@ -2,6 +2,12 @@ package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
+/**
+ * Entfernt die deutschen Umlaute aus einem String
+ *
+ * ä -> ae usw
+ * ß -> ss
+ */
 public class NoUmlaut implements IWord {
 
 	private String word;

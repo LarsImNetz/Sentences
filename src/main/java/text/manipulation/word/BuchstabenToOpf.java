@@ -2,6 +2,9 @@ package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
+/**
+ * Wandelt Buchstaben Groß, Klein und Zahlen in Opf Buchstaben (Doppelbuchstaben)
+ */
 public class BuchstabenToOpf implements IWord {
 
 	private String word;

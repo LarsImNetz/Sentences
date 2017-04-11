@@ -2,6 +2,9 @@ package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
+/**
+ * Wandelt Buchstaben in Schreibschrift
+ */
 public class BuchstabenToSchreibschrift implements IWord {
 
 	private String word;

@@ -2,6 +2,9 @@ package text.manipulation.word;
 
 import com.google.common.base.Preconditions;
 
+/**
+ * Wandelt Großbuchstaben in Kyrillische Buchstaben
+ */
 public class BuchstabenToKyrillisch implements IWord {
 
 	private char[] buchstaben;
