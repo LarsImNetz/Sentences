@@ -33,6 +33,7 @@ public class NoUmlaut implements IWord {
 		word = buffer.toString();
 	}
 
+	// TODO: das geht bestimmt besser
 	private String convert(char buchstabe) {
 		String buchstaben = "";
 		switch (buchstabe) {
