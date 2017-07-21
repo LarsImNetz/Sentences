@@ -41,4 +41,29 @@ public class TestBuchstabenToKyrillisch {
 		buchstabenToKyrillischSUT.setWord("The quick brown fox jumps over the lazy dog".toUpperCase());
 		Assert.assertNotNull(buchstabenToKyrillischSUT.getWord());
 	}
+	
+	@Test
+	public void testSetWord_with0() {
+		buchstabenToKyrillischSUT.setWord("0");
+		Assert.assertEquals("0", buchstabenToKyrillischSUT.getWord());
+	}
+
+	@Test
+	public void testSetWord_with123456789() {
+		buchstabenToKyrillischSUT.setWord("123456789");
+		Assert.assertEquals("123456789", buchstabenToKyrillischSUT.getWord());
+	}
+
+	@Test
+	public void testSetWord_Fox() {
+		buchstabenToKyrillischSUT.setWord("The quick brown fox jumps over the lazy dog");
+		Assert.assertEquals("Тhe quick brown fox jumps over the lazy dog", buchstabenToKyrillischSUT.getWord());
+	}
+
+	@Test
+	public void testSetWord_UppercaseFox() {
+		buchstabenToKyrillischSUT.setWord("The quick brown fox jumps over the lazy dog".toUpperCase());
+		Assert.assertEquals("ТНЭ QUІСК ВЯОШИ FОХ ЈUМРЅ ОVЭЯ ТНЭ ГАZУ DОG", buchstabenToKyrillischSUT.getWord());
+	}
+
 }
