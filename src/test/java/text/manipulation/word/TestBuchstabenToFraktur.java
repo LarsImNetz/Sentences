@@ -1,18 +1,21 @@
 package text.manipulation.word;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TestBuchstabenToFraktur {
 
 	BuchstabenToFraktur fraktur = new BuchstabenToFraktur();
 	
+	@Ignore
 	@Test
 	public void testSetWord_with0() {
 		fraktur.setWord("0");
 		Assert.assertEquals("&0fr;", fraktur.getWord());
 	}
 
+	@Ignore
 	@Test
 	public void testSetWord_with123456789() {
 		fraktur.setWord("123456789");
